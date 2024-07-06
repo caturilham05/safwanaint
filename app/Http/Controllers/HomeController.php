@@ -17,9 +17,22 @@ class HomeController extends Controller
         ->orderBy('id', 'ASC')
         ->get();
 
-        $contact = Contact::first();
-
-        $data = ['data' => $contents, 'contact' => $contact];
+        $data = ['data' => $contents];
         return view('index', $data);
+    }
+
+    public function profile()
+    {
+        return view('profile');
+    }
+
+    public function service()
+    {
+        return view('service');
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 }

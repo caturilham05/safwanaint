@@ -12,8 +12,6 @@
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Crew Recruitment Company for</h5>
                             <h1 class="display-3 text-white animated slideInDown mb-4">International & Domestic Shipping Operations</h1>
                             <p class="fs-5 fw-medium text-white mb-4 pb-2">Established since 2010 with a number of clients in several countries that operates merchant ships, cruise ship and fishing vessels either Complete Crew Management</p>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
                     </div>
                 </div>
@@ -28,8 +26,6 @@
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Crew Recruitment Company for</h5>
                             <h1 class="display-3 text-white animated slideInDown mb-4">International & Domestic Shipping Operations</h1>
                             <p class="fs-5 fw-medium text-white mb-4 pb-2">Established since 2010 with a number of clients in several countries that operates merchant ships, cruise ship and fishing vessels either Complete Crew Management</p>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
                     </div>
                 </div>
@@ -44,8 +40,6 @@
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Crew Recruitment Company for</h5>
                             <h1 class="display-3 text-white animated slideInDown mb-4">International & Domestic Shipping Operations</h1>
                             <p class="fs-5 fw-medium text-white mb-4 pb-2">Established since 2010 with a number of clients in several countries that operates merchant ships, cruise ship and fishing vessels either Complete Crew Management</p>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
                     </div>
                 </div>
