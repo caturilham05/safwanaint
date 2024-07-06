@@ -11,28 +11,37 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $contents = Content::with(['contentCategory', 'media'])
-        ->where('active', 1)
-        ->whereRelation('contentCategory', 'name', 'home')
-        ->orderBy('id', 'ASC')
-        ->get();
-
-        $data = ['data' => $contents];
+        $data = ['data' => $this->getData('home'), 'title' => 'Home'];
         return view('index', $data);
     }
 
     public function profile()
     {
-        return view('profile');
+        $data = ['title' => 'Profile', 'data' => $this->getData('profile')];
+        return view('profile', $data);
     }
 
     public function service()
     {
-        return view('service');
+        $data = ['title' => 'Service', 'data' => $this->getData('services')];
+        return view('service', $data);
     }
 
     public function contact()
     {
-        return view('contact');
+        $data = ['title' => 'Contact'];
+        return view('contact', $data);
+    }
+
+    public function getData($data = '')
+    {
+        if (empty($data)) return false;
+        $contents = Content::with(['contentCategory', 'media'])
+        ->where('active', 1)
+        ->whereRelation('contentCategory', 'name', $data)
+        ->orderBy('id', 'ASC')
+        ->get();
+
+        return $contents;
     }
 }
