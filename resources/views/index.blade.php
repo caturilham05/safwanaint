@@ -3,48 +3,26 @@
 @section('content')
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{asset('assets/img/kapal-1.jpg')}}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Crew Recruitment Company for</h5>
-                            <h1 class="display-3 text-white animated slideInDown mb-4">International & Domestic Shipping Operations</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Established since 2010 with a number of clients in several countries that operates merchant ships, cruise ship and fishing vessels either Complete Crew Management</p>
+        @foreach ($imageslider as $slider)
+            @php
+            preg_match('/<p>(.*?)<\/p>/is', $slider->description, $match);
+            $description = $match[1];
+            @endphp
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{asset('/storage/'.$slider->media[0]->id.'/'.$slider->media[0]->file_name)}}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{$slider->intro}}</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">{{$slider->title}}</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">{!! $description !!}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{asset('assets/img/kapal-2.jpg')}}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Crew Recruitment Company for</h5>
-                            <h1 class="display-3 text-white animated slideInDown mb-4">International & Domestic Shipping Operations</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Established since 2010 with a number of clients in several countries that operates merchant ships, cruise ship and fishing vessels either Complete Crew Management</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{asset('assets/img/kapal-3.jpg')}}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Crew Recruitment Company for</h5>
-                            <h1 class="display-3 text-white animated slideInDown mb-4">International & Domestic Shipping Operations</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Established since 2010 with a number of clients in several countries that operates merchant ships, cruise ship and fishing vessels either Complete Crew Management</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 

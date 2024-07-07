@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $contact = Contact::first();
+        $contact = Contact::with('media')->first();
         \View::share('contact', $contact);
     }
 }

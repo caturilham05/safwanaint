@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Content;
 use App\Models\ContentCategory;
 use App\Models\Contact;
+use App\Models\Imageslider;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $data = ['data' => $this->getData('home'), 'title' => 'Home'];
+        $imageslider = Imageslider::with(['media'])->where('active', 1)->orderBy('id', 'DESC')->get();
+        $data = ['data' => $this->getData('home'), 'title' => 'Home', 'imageslider' => $imageslider];
         return view('index', $data);
     }
 

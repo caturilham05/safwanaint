@@ -14,7 +14,7 @@
     <meta name="Author" content="{{url('/')}}">
 
     <!-- Favicon -->
-    <link href="{{asset('assets/img/favicon.ico')}}" rel="icon">
+    <link href="{{asset('/storage/'.$contact->media[0]->id.'/'.$contact->media[0]->file_name)}}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
