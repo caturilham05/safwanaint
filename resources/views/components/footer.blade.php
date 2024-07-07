@@ -9,11 +9,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">{{preg_match('/office/is', $item->name) ? 'Address' : 'Head Office'}}</h4>
                     <p class="mb-2"><i class="fa fa-user me-3"></i>{{$item->name}}</p>
-                    @if (preg_match('/office/is', $item->name))
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{$item->address}}</p>
-                    @endif
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{$item->phone}}</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{$item->email}}</p>
+                    @if (preg_match('/office/is', $item->name))
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{$item->address}}</p>
+                    @endif
                 </div>
             @endforeach
             <div class="col-lg-3 col-md-6">
