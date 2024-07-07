@@ -30,6 +30,7 @@ class ContactResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('name')->maxLength(255),
                 Forms\Components\TextInput::make('phone')->maxLength(15),
                 Forms\Components\TextInput::make('email')->maxLength(50),
                 Textarea::make('address'),
@@ -42,6 +43,7 @@ class ContactResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('name')->searchable(),
                 Tables\Columns\TextColumn::make('phone')->searchable(),
                 Tables\Columns\TextColumn::make('email')->searchable(),
                 TextColumn::make('address')->limit(50),

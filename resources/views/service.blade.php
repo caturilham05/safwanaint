@@ -12,13 +12,9 @@
 	<h1>Data Tidak Ditemukan</h1>
 @else
 	@foreach ($data as $item)	
-		<div class="container-xxl py-5">
+		<div class="container-xxl py-1">
 		    <div class="container">
-		        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-		            <h6 class="text-secondary text-uppercase">{{$item->intro}}</h6>
-		            <h1 class="text-uppercase mb-5">{{$item->title}}</h1>
-		        </div>
-		        <div class="row g-4">
+		        <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
 		            <div style="text-align: justify;">{!!$item->content!!}</div>
 		        </div>
 		    </div>

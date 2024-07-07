@@ -179,7 +179,7 @@
 }
 
 @media (max-width: 768px) {
-    .certification-border {
+    .certificate-test {
         flex-direction: column;
         align-items: center;
     }
@@ -253,20 +253,20 @@
 .fact {
     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/kapal-1.jpg) center center no-repeat;
     background-size: cover;
-    padding: 5rem;
+    padding: 2rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-
+/*
 .certification-border{
     display: flex;
     justify:center;
     align-items: center;
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the border */
+    border-radius: 8px;
+    padding: 20px;
     background: rgba(30, 96, 170, 0.7);
 }
-
+*/
 
 /*** Service ***/
 .service-item-top img {
@@ -601,4 +601,68 @@
 
 .footer .copyright a {
     color: var(--light);
+}
+
+.certificate-container {
+    display: flex;
+    background: white;
+    border: 2px solid #ccc;
+    position: relative;
+}
+
+.certificate-content {
+    width: 75%;
+}
+
+.certificate-content img {
+    width: 100%;
+    height: auto;
+}
+
+.certificate-border {
+    width: 10%;
+    background-color: #3b5d7c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.certificate-border p {
+    margin: 0;
+}
+
+.certificate-test{
+    display: flex;
+}
+.certificate-container-test {
+    position: relative;
+    display: inline-block;
+}
+
+.certificate-image-test {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.certificate-frame-test {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    writing-mode: vertical-rl;
+    text-align: center;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 }

@@ -19,18 +19,19 @@ class HomeController extends Controller
 
     public function profile()
     {
-        $data = ['title' => 'Profile', 'data' => $this->getData('profile')];
+        $data = ['title' => 'About Us', 'data' => $this->getData('about us')];
         return view('profile', $data);
     }
 
     public function service()
     {
-        $data = ['title' => 'Service', 'data' => $this->getData('services')];
+        $data = ['title' => 'Kru Service', 'data' => $this->getData('kru service')];
         return view('service', $data);
     }
 
     public function contact()
     {
+        // $contacts = Contact::get();
         $data = ['title' => 'Contact'];
         return view('contact', $data);
     }

@@ -13,5 +13,5 @@ class Contact extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $table    = 'contacts';
-    protected $fillable = ['phone', 'address', 'email', 'description'];
+    protected $fillable = ['name' ,'phone', 'address', 'email', 'email_additional_1', 'email_additional_2', 'description'];
 }

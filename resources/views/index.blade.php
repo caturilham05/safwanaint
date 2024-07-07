@@ -29,28 +29,33 @@
 
 @foreach ($data as $item)
     @if (!$item->media->isEmpty())
-        <div class="container-xxl">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">{{$item->intro}}</h6>
-                    <h1 class="text-uppercase">{{$item->title}}</h1>
+        <div class="container-fluid py-5 px-4 px-lg-0">
+            <div class="row g-0">
+                <div class="col-lg-3 d-none d-lg-flex">
+                    <div class="d-flex align-items-center justify-content-center bg-primary w-100 h-100">
+                        <h1 class="display-3 text-white" style="transform: rotate(-90deg); margin-bottom: 5rem">{{$item->title}}</h1>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid fact bg-dark">
-            <div class="certification-border">
-                @foreach ($item->media as $media)
-                        <div class="certification-wrapper">
-                            <img src="{{asset('/storage/'.$media->id.'/'.$media->file_name)}}" alt="Certification" class="certification-image" style="max-width: 100%; height: auto; border-radius: 8px; padding: 1rem;">
+                <div class="col-md-12 col-lg-9">
+                    <div class="ms-lg-5 ps-lg-5">
+                        <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                            <h6 class="text-secondary text-uppercase">{{-- Our Services --}}</h6>
+                            <h1 class="mb-3">{{$item->title}}</h1>
                         </div>
-                @endforeach
+                        <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                            @foreach ($item->media as $media)
+                                <img src="{{asset('/storage/'.$media->id.'/'.$media->file_name)}}" alt="{{$media->file_name}}">
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     @else
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">{{$item->intro}}</h6>
+                    {{-- <h6 class="text-secondary text-uppercase">{{$item->intro}}</h6> --}}
                     <h1 class="text-uppercase">{{$item->title}}</h1>
                 </div>
                 <div class="row g-4">
