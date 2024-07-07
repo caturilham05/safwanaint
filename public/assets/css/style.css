@@ -179,6 +179,22 @@
 }
 
 @media (max-width: 768px) {
+    .custom-title-logo {
+        margin-left: -50px !important;
+        font-size: 30px;
+    }
+
+    .custom-img-logo {
+        max-width: 20% !important;
+        /*margin-left: -25px;*/
+    }
+
+    .custom-nav {
+        /*padding: 0 1rem 0 1rem;*/
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .certificate-test {
         flex-direction: column;
         align-items: center;
@@ -665,4 +681,9 @@
     font-size: 20px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.custom-img-logo {
+    max-width: 7%;
+    height: auto;
 }

@@ -5,11 +5,13 @@
                 <h4 class="text-light mb-4">Safwana Marine International</h4>
                 <p style="text-align: justify;">{!!$contacts[0]->description!!}</p>
             </div>
-            @foreach ($contacts as $item)  
+            @foreach ($contacts as $item)
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Contact Us</h4>
+                    <h4 class="text-light mb-4">{{preg_match('/office/is', $item->name) ? 'Address' : 'Head Office'}}</h4>
                     <p class="mb-2"><i class="fa fa-user me-3"></i>{{$item->name}}</p>
+                    @if (preg_match('/office/is', $item->name))
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{$item->address}}</p>
+                    @endif
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{$item->phone}}</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{$item->email}}</p>
                 </div>

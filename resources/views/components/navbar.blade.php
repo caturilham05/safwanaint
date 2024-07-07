@@ -1,8 +1,8 @@
 <div class="container-fluid nav-bar bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-        <img src="{{asset('/storage/'.$contacts[0]->media[0]->id.'/'.$contacts[0]->media[0]->file_name)}}" alt="logo" style="max-width: 13%; height: auto;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-4 custom-nav">
+        <img src="{{asset('/storage/'.$contacts[0]->media[0]->id.'/'.$contacts[0]->media[0]->file_name)}}" alt="logo" class="custom-img-logo">
         <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-            <h1 class="text-primary m-0">SAFWANAINT</h1>
+            <h1 class="text-primary m-0 custom-title-logo">SAFWANAINT</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
@@ -11,7 +11,7 @@
             <div class="navbar-nav me-auto">
                 <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
                 <a href="{{route('profile')}}" class="nav-item nav-link">About Us</a>
-                <a href="{{route('service')}}" class="nav-item nav-link">Kru Service</a>
+                <a href="{{route('service')}}" class="nav-item nav-link">Crew Service</a>
                 <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
             </div>
             <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">

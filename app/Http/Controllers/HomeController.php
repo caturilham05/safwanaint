@@ -25,7 +25,7 @@ class HomeController extends Controller
 
     public function service()
     {
-        $data = ['title' => 'Kru Service', 'data' => $this->getData('kru service')];
+        $data = ['title' => 'Crew Service', 'data' => $this->getData('crew service')];
         return view('service', $data);
     }
 
