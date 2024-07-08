@@ -670,19 +670,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 150px;
+    width: 100px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
     text-align: center;
     line-height: 1.5;
     font-family: Arial, sans-serif;
     font-size: 20px;
-    padding: 10px;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -697,7 +699,6 @@
 }
 
 .certificate-logo {
-    max-height: 100px;
+    max-width:100px;
     transform: rotate(90deg);
-    margin-top: 2rem;
 }

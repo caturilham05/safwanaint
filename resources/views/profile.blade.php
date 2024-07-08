@@ -20,11 +20,11 @@
 						    <img src="{{asset('/storage/'.$media->id.'/'.$media->file_name)}}" alt="Certificate" class="certificate-image-test">
 						    <div class="certificate-frame-test">
 						    	@if (($key == 0) || ($key == 1))
-							    	<span class="certificate-text">CERTIFICATE</span>
 							    	<img src="{{asset('assets/rina.png')}}" class="certificate-logo">
-						    	@elseif (($key == 2))
 							    	<span class="certificate-text">CERTIFICATE</span>
+						    	@elseif (($key == 2))
 							    	<img src="{{asset('assets/iqnet.png')}}" class="certificate-logo">
+							    	<span class="certificate-text">CERTIFICATE</span>
 						    	@endif
 							</div>
 						</div>
