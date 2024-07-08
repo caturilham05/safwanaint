@@ -690,3 +690,14 @@
     max-width: 7%;
     height: auto;
 }
+
+.certificate-text {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.certificate-logo {
+    max-height: 100px;
+    transform: rotate(90deg);
+    margin-top: 2rem;
+}

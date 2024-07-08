@@ -20,11 +20,11 @@
 						    <img src="{{asset('/storage/'.$media->id.'/'.$media->file_name)}}" alt="Certificate" class="certificate-image-test">
 						    <div class="certificate-frame-test">
 						    	@if (($key == 0) || ($key == 1))
-							    	<span style="font-size: 35px; font-weight: bold;">OUR CERTIFICATE</span>
-							    	<img src="{{asset('assets/rina.png')}}" style="max-height: 100px; transform: rotate(90deg); margin-top: 2rem;">
+							    	<span class="certifcate-text">CERTIFICATE</span>
+							    	<img src="{{asset('assets/rina.png')}}" class="certificate-logo">
 						    	@elseif (($key == 2))
-							    	<span style="font-size: 35px; font-weight: bold;">OUR CERTIFICATE</span>
-							    	<img src="{{asset('assets/iqnet.png')}}" style="max-height: 100px; transform: rotate(90deg); margin-top: 2rem;">
+							    	<span class="certifcate-text">CERTIFICATE</span>
+							    	<img src="{{asset('assets/iqnet.png')}}" class="certificate-logo">
 						    	@endif
 							</div>
 						</div>
