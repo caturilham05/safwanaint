@@ -667,11 +667,14 @@
 }
 
 .certificate-frame-test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100px;
+    width: 150px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     writing-mode: vertical-rl;
