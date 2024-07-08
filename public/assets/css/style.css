@@ -699,6 +699,6 @@
 }
 
 .certificate-logo {
-    max-width:100px;
+    max-width: 80px;
     transform: rotate(90deg);
 }
