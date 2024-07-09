@@ -4,7 +4,7 @@
         <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
             <h1 class="text-primary m-0 custom-title-logo" style="color: #3552e6 !important;">SAFWANAINT</h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">

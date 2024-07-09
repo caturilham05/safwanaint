@@ -179,9 +179,14 @@
 }
 
 @media (max-width: 768px) {
+    .custom-toggler{
+        margin-top: -17px !important;
+    }
+
     .custom-title-logo {
-        /*margin-left: -35px !important;*/
-        font-size: 25px;
+        margin-top: -17px !important;
+        margin-left: -20px !important;
+        font-size: 35px;
     }
 
     .custom-img-logo {
@@ -189,7 +194,7 @@
     }
 
     .custom-nav {
-        /*padding: 0 1rem 0 1rem;*/
+        /*padding: 0 1rem 0 1rem;*/        
         padding-left: 1rem;
         padding-right: 1rem;
     }
