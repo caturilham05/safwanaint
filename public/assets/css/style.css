@@ -180,13 +180,12 @@
 
 @media (max-width: 768px) {
     .custom-title-logo {
-        margin-left: -50px !important;
-        font-size: 30px;
+        margin-left: -35px !important;
+        font-size: 45px;
     }
 
     .custom-img-logo {
         max-width: 20% !important;
-        /*margin-left: -25px;*/
     }
 
     .custom-nav {
