@@ -7,7 +7,7 @@
             </div>
             @foreach ($contacts as $item)
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">{{preg_match('/office/is', $item->name) ? 'Address' : 'Head Office'}}</h4>
+                    <h4 class="text-light mb-4">{{preg_match('/office/is', $item->name) ? 'Contact Us' : 'Head Office'}}</h4>
                     <p class="mb-2"><i class="fa fa-user me-3"></i>{{$item->name}}</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{$item->phone}}</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{$item->email}}</p>

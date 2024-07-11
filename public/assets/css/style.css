@@ -180,17 +180,17 @@
 
 @media (max-width: 768px) {
     .custom-toggler{
-        margin-top: -17px !important;
+        margin-top: -13px !important;
     }
 
     .custom-title-logo {
-        margin-top: -17px !important;
-        margin-left: -20px !important;
+        margin-top: -13px !important;
+        margin-left: -25px !important;
         font-size: 35px;
     }
 
     .custom-img-logo {
-        max-width: 20% !important;
+        max-width: 15% !important;
     }
 
     .custom-nav {
