@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-4 custom-nav">
         <img src="{{asset('/storage/'.$contacts[0]->media[0]->id.'/'.$contacts[0]->media[0]->file_name)}}" alt="logo" class="custom-img-logo">
         <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-            <h1 class="text-primary m-0 custom-title-logo" style="color: #3552e6 !important;">SAFWANA-INT</h1>
+            <h1 class="text-primary m-0 custom-title-logo" style="color: #3552e6 !important; font-size: 30px;">SAFWANA-INT</h1>
         </a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>

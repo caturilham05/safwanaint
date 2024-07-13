@@ -14,6 +14,9 @@
 	@foreach ($data as $item)
 	    @if (!$item->media->isEmpty())
 	        <div class="container-fluid fact bg-dark wow fadeInUp">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="text-uppercase mb-4" style="color: #fff !important">Our License</h1>
+                </div>
 	            <div class="certificate-test">
 	                @foreach ($item->media as $key => $media)
 						<div class="certificate-container-test m-3">

@@ -1,10 +1,32 @@
 @extends('layout.index')
 
 @section('content')
-<!-- Page Header Start -->
-<div class="container-fluid page-header mb-5 py-5">
-    <div class="container">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">{{$title}}</h1>
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        @foreach ($imageslider as $slider)
+            @if (!empty($slider->description))
+                @php
+                preg_match('/<p>(.*?)<\/p>/is', $slider->description, $match);
+                $description = $match[1];
+                @endphp
+            @endif
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{asset('/storage/'.$slider->media[0]->id.'/'.$slider->media[0]->file_name)}}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
+                    @if (!empty($description))                    
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{$slider->intro}}</h5>
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">{{$slider->title}}</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">{!! $description ?? '' !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
 
@@ -15,6 +37,7 @@
 		<div class="container-xxl py-1">
 		    <div class="container">
 		        <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
+				    <h4 class="text-secondary text-uppercase">{{$title}}</h4>
 		            <div style="text-align: justify;">{!!$item->content!!}</div>
 		        </div>
 		    </div>

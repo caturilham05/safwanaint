@@ -12,6 +12,7 @@
     <meta name="googlebot-news" content="index, follow">
     <meta name="developer" content="caturilham05.github.io/portfolio">
     <meta name="Author" content="{{url('/')}}">
+    <meta name="google-site-verification" content="DH-90XsxXCtmbz9Spv3BPpsxyUZl1LaqYTISfMrTXes" />
 
     <!-- Favicon -->
     <link href="{{asset('/storage/'.$contacts[0]->media[0]->id.'/'.$contacts[0]->media[0]->file_name)}}" rel="icon">

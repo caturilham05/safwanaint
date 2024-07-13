@@ -31,7 +31,7 @@ class ContactResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')->maxLength(255),
-                Forms\Components\TextInput::make('phone')->maxLength(15),
+                Forms\Components\TextInput::make('phone')->maxLength(255),
                 Forms\Components\TextInput::make('email')->maxLength(50),
                 Textarea::make('address'),
                 RichEditor::make('description')->columnSpanFull(),

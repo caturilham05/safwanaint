@@ -25,7 +25,8 @@ class HomeController extends Controller
 
     public function service()
     {
-        $data = ['title' => 'Crew Service', 'data' => $this->getData('crew service')];
+        $imageslider = Imageslider::with(['media'])->where('active', 1)->orderBy('id', 'DESC')->get();
+        $data = ['title' => 'Crew Service', 'data' => $this->getData('crew service'), 'imageslider' => $imageslider];
         return view('service', $data);
     }
 
@@ -34,6 +35,16 @@ class HomeController extends Controller
         // $contacts = Contact::get();
         $data = ['title' => 'Contact'];
         return view('contact', $data);
+    }
+
+    public function digital_signature(Request $request)
+    {
+        $token = $request->query('token');
+        if (!$token) {
+            abort('404');
+        }
+        $data = ['data' => $this->getData('signature')->first(), 'title' => 'Digital Signature'];
+        return view('signature', $data);
     }
 
     public function getData($data = '')

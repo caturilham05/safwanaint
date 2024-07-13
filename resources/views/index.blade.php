@@ -33,7 +33,7 @@
 
 @foreach ($data as $item)
     @if (!$item->media->isEmpty())
-        <div class="container-fluid py-5 px-4 px-lg-0">
+        <div class="container-fluid px-4 px-lg-0">
             <div class="row g-0">
                 <div class="col-lg-3 d-none d-lg-flex">
                     <div class="d-flex align-items-center justify-content-center bg-primary w-100 h-100">
@@ -43,7 +43,6 @@
                 <div class="col-md-12 col-lg-9">
                     <div class="ms-lg-5 ps-lg-5">
                         <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
-                            <h6 class="text-secondary text-uppercase">{{-- Our Services --}}</h6>
                             <h1 class="mb-3">{{$item->title}}</h1>
                         </div>
                         <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
@@ -56,11 +55,10 @@
             </div>
         </div>
     @else
-        <div class="container-xxl py-5">
+        <div class="container-xxl pt-3">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    {{-- <h6 class="text-secondary text-uppercase">{{$item->intro}}</h6> --}}
-                    <h1 class="text-uppercase">{{$item->title}}</h1>
+                    <h1 class="text-uppercase mb-4">{{$item->title}}</h1>
                 </div>
                 <div class="row g-4">
                     <div style="text-align: justify;">{!!$item->content!!}</div>
