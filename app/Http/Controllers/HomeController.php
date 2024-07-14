@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $imageslider = Imageslider::with(['media'])->where('active', 1)->orderBy('id', 'DESC')->get();
+        $imageslider = Imageslider::with(['media'])->where('active', 1)->where('imageslider_category_id', 1)->orderBy('id', 'DESC')->get();
         $data = ['data' => $this->getData('home'), 'title' => 'Home', 'imageslider' => $imageslider];
         return view('index', $data);
     }
@@ -25,25 +25,24 @@ class HomeController extends Controller
 
     public function service()
     {
-        $imageslider = Imageslider::with(['media'])->where('active', 1)->orderBy('id', 'DESC')->get();
+        $imageslider = Imageslider::with(['media'])->where('active', 1)->where('imageslider_category_id', 2)->orderBy('id', 'DESC')->get();
         $data = ['title' => 'Crew Service', 'data' => $this->getData('crew service'), 'imageslider' => $imageslider];
         return view('service', $data);
     }
 
     public function contact()
     {
-        // $contacts = Contact::get();
         $data = ['title' => 'Contact'];
         return view('contact', $data);
     }
 
-    public function digital_signature(Request $request)
+    public function digital_signature($token)
     {
-        $token = $request->query('token');
-        if (!$token) {
+        $data_contact = Contact::where('signature', $token)->where('active', 1)->get()->first();
+        if (!$data_contact) {
             abort('404');
         }
-        $data = ['data' => $this->getData('signature')->first(), 'title' => 'Digital Signature'];
+        $data = ['data' => $this->getData('signature')->first(), 'title' => 'Digital Signature', 'data_contact' => $data_contact];
         return view('signature', $data);
     }
 

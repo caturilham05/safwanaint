@@ -1,7 +1,7 @@
 @extends('layout.index')
 
 @section('content')
-<div class="container-fluid page-header mb-5 py-5">
+<div class="container-fluid page-header-contact mb-5 py-5">
     <div class="container">
         <h1 class="display-3 text-white mb-3 animated slideInDown">{{$title}}</h1>
     </div>

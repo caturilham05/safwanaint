@@ -13,5 +13,10 @@ class Imageslider extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $table    = 'imagesliders';
-    protected $fillable = ['title', 'intro', 'description', 'active'];
+    protected $fillable = ['imageslider_category_id', 'title', 'intro', 'description', 'active'];
+
+    public function imagesliderCategory()
+    {
+        return $this->hasOne(ImagesliderCategory::class, 'id', 'imageslider_category_id');
+    }
 }

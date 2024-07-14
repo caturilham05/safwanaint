@@ -153,6 +153,7 @@
 
 /*** Header ***/
 .header-carousel .container,
+.page-header-contact .container,
 .page-header .container {
     position: relative;
     padding: 45px 0 45px 35px;
@@ -162,7 +163,9 @@
 .header-carousel .container::before,
 .header-carousel .container::after,
 .page-header .container::before,
-.page-header .container::after {
+.page-header .container::after,
+.page-header-contact .container::before,
+.page-header-contact .container::after {
     position: absolute;
     content: "";
     top: 0;
@@ -173,6 +176,7 @@
 }
 
 .header-carousel .container::after,
+.page-header-contact .container::after,
 .page-header .container::after {
     top: 100%;
     margin-top: -15px;
@@ -260,7 +264,12 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/kapal-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../about-us.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header-contact {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../collaboration.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -271,7 +280,7 @@
 
 /*** Facts ***/
 .fact {
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/kapal-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../our-cert.webp) center center no-repeat;
     background-size: cover;
     padding: 2rem;
     margin-top: 3rem;

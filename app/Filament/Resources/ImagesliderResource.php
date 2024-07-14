@@ -16,9 +16,12 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Select;
 
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
+
+use App\Models\imagesliderCategory;
 
 class ImagesliderResource extends Resource
 {
@@ -30,6 +33,7 @@ class ImagesliderResource extends Resource
     {
         return $form
             ->schema([
+                Select::make('imageslider_category_id')->label('Imageslider Category')->options(imagesliderCategory::all()->pluck('name', 'id'))->searchable(),
                 Forms\Components\TextInput::make('title')->maxLength(255),
                 Forms\Components\TextInput::make('intro')->maxLength(255),
                 RichEditor::make('description')->columnSpanFull(),
@@ -42,6 +46,7 @@ class ImagesliderResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('imagesliderCategory.name'),
                 Tables\Columns\TextColumn::make('title')->searchable(),
                 Tables\Columns\TextColumn::make('intro')->searchable(),
                 TextColumn::make('description')->limit(50),
