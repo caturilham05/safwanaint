@@ -11,7 +11,7 @@
 <div class="container-xxl py-1">
     <div class="container">
     	<center>
-				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeo2eaqVXHVYiTextxRi_BdqQnUcytSqtxZy9IudcZ0g5JAfg/viewform?embedded=true" width="720" height="1069" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeo2eaqVXHVYiTextxRi_BdqQnUcytSqtxZy9IudcZ0g5JAfg/viewform?embedded=true" width="100%" height="1069" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
     	</center>
     </div>
 </div>
