@@ -7,8 +7,13 @@ $contacts = $contacts->filter(function($item){
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Safwana Marine International</h4>
+                <h4 class="text-light mb-4">PT. Safwana Marine International</h4>
                 <p style="text-align: justify;">{!!$contacts[0]->description!!}</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/safwanaint/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
             @foreach ($contacts as $item)
                 <div class="col-lg-3 col-md-6">

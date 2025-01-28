@@ -35,8 +35,8 @@
 		<div class="container-xxl py-1">
 		    <div class="container">
 		        <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
-				    <h4 class="text-secondary text-uppercase" style="color: #17224D !important">{{$title}}</h4>
-		            <div style="text-align: justify;">{!!$item->content!!}</div>
+				    <h4 class="text-secondary text-uppercase" style="color: #17224D !important">{{__('service.title')}}</h4>
+		            <div style="text-align: justify;">{!!__('service.content')!!}</div>
 		        </div>
 		    </div>
 		</div>

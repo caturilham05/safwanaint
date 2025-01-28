@@ -12,6 +12,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        // $locale = app()->currentLocale();
         $imageslider = Imageslider::with(['media'])->where('active', 1)->where('imageslider_category_id', 1)->orderBy('id', 'DESC')->get();
         $data = ['data' => $this->getData('home'), 'title' => 'Home', 'imageslider' => $imageslider];
         return view('index', $data);
@@ -34,6 +35,12 @@ class HomeController extends Controller
     {
         $data = ['title' => 'Contact'];
         return view('contact', $data);
+    }
+
+    public function apply()
+    {
+        $data = ['title' => 'Apply'];
+        return view('apply', $data);
     }
 
     public function digital_signature($token)

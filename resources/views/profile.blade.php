@@ -31,7 +31,7 @@
 	                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
 	                </div>
 	                <div class="row g-4">
-	                    <div style="text-align: justify;">{!!$item->content!!}</div>
+	                    <div style="text-align: justify;">{!!__('about_us.content')!!}</div>
 	                </div>
 	            </div>
 	        </div>
