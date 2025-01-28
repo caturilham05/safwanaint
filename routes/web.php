@@ -18,13 +18,4 @@ Route::group([
 });
 
 Route::get('/signature/{token}', [HomeController::class, 'digital_signature'])->name('signature');
-Route::get('/send-email',function(){
-    $data = [
-        'name' => 'Syahrizal As',
-        'body' => 'Testing Kirim Email di Santri Koding'
-    ];
-   
-    Mail::to('caturilham05@gmail.com')->send(new SendEmail($data));
-   
-    dd("Email Berhasil dikirim.");
-});
+Route::post('/send', [HomeController::class, 'contact_post'])->name('contact_post');

@@ -7,6 +7,10 @@ use App\Models\Content;
 use App\Models\ContentCategory;
 use App\Models\Contact;
 use App\Models\Imageslider;
+use App\Models\Messages;
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 
 class HomeController extends Controller
 {
@@ -35,6 +39,34 @@ class HomeController extends Controller
     {
         $data = ['title' => 'Contact'];
         return view('contact', $data);
+    }
+
+    public function contact_post(Request $request)
+    {
+        $this->validate($request,[
+                'fullname' => 'required',
+                'email'    => 'required|email',
+                'subject'  => 'required',
+                'message'  => 'required',
+            ],
+            [
+                'fullname.required' => 'nama lengkap tidak boleh kosong',
+                'email.required'    => 'email tidak boleh kosong',
+                'email.email'       => 'email tidak valid',
+                'subject'           => 'subject tidak boleh kosong',
+                'message'           => 'message tidak boleh kosong',
+            ]
+        );
+
+        $post = [
+            'fullname' => $request->fullname,
+            'email'    => $request->email,
+            'subject'  => $request->subject,
+            'message'  => $request->message,
+        ];
+
+        Messages::create($post);
+        return redirect()->route('contact')->with(['success' => 'Terima kasih, email anda berhasil dikirim!']);
     }
 
     public function apply()
