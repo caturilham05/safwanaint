@@ -59,11 +59,23 @@ class HomeController extends Controller
         );
 
         $post = [
-            'fullname' => $request->fullname,
-            'email'    => $request->email,
-            'subject'  => $request->subject,
-            'message'  => $request->message,
+            'fullname' => $request->fullname ?? '',
+            'email'    => $request->email ?? '',
+            'subject'  => $request->subject ?? '',
+            'message'  => $request->message ?? '',
         ];
+
+
+        $send = Mail::send('emails.sendemail', [
+            'name'            => $post['fullname'],
+            'subject'         => $post['subject'],
+            'message_content' => $post['message'],
+            'email'           => $post['email'],
+        ], function ($message) use ($post) {
+            $message->to('recehanfaucet@gmail.com')
+                    ->subject($post['email']);
+            $message->from($post['email'], $post['fullname']);
+        });
 
         Messages::create($post);
         return redirect()->route('contact')->with(['success' => 'Terima kasih, email anda berhasil dikirim!']);
