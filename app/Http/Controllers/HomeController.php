@@ -72,7 +72,8 @@ class HomeController extends Controller
             'message_content' => $post['message'],
             'email'           => $post['email'],
         ], function ($message) use ($post) {
-            $message->to('recehanfaucet@gmail.com')
+            // $message->to('recehanfaucet@gmail.com')
+            $message->to('office@safwanaint.com')
                     ->subject($post['email']);
             $message->from($post['email'], $post['fullname']);
         });
