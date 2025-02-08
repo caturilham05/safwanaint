@@ -10,10 +10,10 @@ $contacts = $contacts->filter(function($item){
                 <h4 class="text-light mb-4">PT. Safwana Marine International</h4>
                 <p style="text-align: justify;">{!!$contacts[0]->description!!}</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/safwanaint/"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fa fa-map-marker-alt"></i></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f" target="blank"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/safwanaint/" target="blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in" target="blank"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://maps.app.goo.gl/xitetZMfyhoxsWMV9" target="blank"><i class="fa fa-map-marker-alt"></i></a>
                 </div>
             </div>
             @foreach ($contacts as $item)
