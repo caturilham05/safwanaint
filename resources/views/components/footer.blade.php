@@ -13,6 +13,7 @@ $contacts = $contacts->filter(function($item){
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/safwanaint/"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fa fa-map-marker-alt"></i></i></a>
                 </div>
             </div>
             @foreach ($contacts as $item)
@@ -22,7 +23,7 @@ $contacts = $contacts->filter(function($item){
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{$item->phone}}</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{$item->email}}</p>
                     @if (preg_match('/office/is', $item->name))
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{$item->address}}</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{!!$item->address!!}</p>
                     @endif
                 </div>
             @endforeach
