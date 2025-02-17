@@ -13,7 +13,7 @@
                 <a href="{{route('profile')}}" class="nav-item nav-link">{{__('navbar.about_us')}}</a>
                 <a href="{{route('service')}}" class="nav-item nav-link">{{__('navbar.crew_service')}}</a>
                 <a href="{{route('contact')}}" class="nav-item nav-link">{{__('navbar.contact')}}</a>
-                @if (!env('APP_DEBUG'))
+                @if (env('APP_DEBUG'))
                     <a href="{{route('apply')}}" class="nav-item nav-link" style="color: #FF4917 !important">{{__('navbar.apply')}}</a>
                 @endif
                 <li class="nav-item dropdown">
