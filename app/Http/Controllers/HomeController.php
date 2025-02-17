@@ -43,6 +43,10 @@ class HomeController extends Controller
 
     public function contact_post(Request $request)
     {
+        /*sementara dimatikan*/
+        return abort(404, 'Halaman tidak ditemukan');
+        /*sementara dimatikan*/
+
         $this->validate($request,[
                 'fullname' => 'required',
                 'email'    => 'required|email',
