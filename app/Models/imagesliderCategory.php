@@ -11,4 +11,5 @@ class ImagesliderCategory extends Model
 
     protected $table    = 'imageslider_categories';
     protected $fillable = ['name'];
+    // protected $fillable = ['name'];
 }
