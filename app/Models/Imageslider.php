@@ -14,7 +14,6 @@ class Imageslider extends Model implements HasMedia
 
     protected $table    = 'imagesliders';
     protected $fillable = ['imageslider_category_id', 'title', 'intro', 'description', 'active'];
-    // protected $fillable = ['imageslider_category_id', 'title', 'intro', 'description', 'active'];
 
     public function imagesliderCategory()
     {
