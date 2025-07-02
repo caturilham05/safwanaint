@@ -21,7 +21,7 @@ use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
-use App\Models\imagesliderCategory;
+use App\Models\ImagesliderCategory;
 
 class ImagesliderResource extends Resource
 {
@@ -33,7 +33,7 @@ class ImagesliderResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('imageslider_category_id')->label('Imageslider Category')->options(imagesliderCategory::all()->pluck('name', 'id'))->searchable(),
+                Select::make('imageslider_category_id')->label('Imageslider Category')->options(ImagesliderCategory::all()->pluck('name', 'id'))->searchable(),
                 Forms\Components\TextInput::make('title')->maxLength(255),
                 Forms\Components\TextInput::make('intro')->maxLength(255),
                 RichEditor::make('description')->columnSpanFull(),
